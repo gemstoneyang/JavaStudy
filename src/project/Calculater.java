@@ -2,15 +2,25 @@ package project;
 
 public class Calculater {
     public static void main(String [] args) {
-        int a;
         System.out.println("Calculater class started.");
-        a = add(3, 5);
-        System.out.println(a);
+        Calculater calc = new Calculater();
+        int a = 10;
+        int b = 5;
+        System.out.println("add : " + calc.add(a, b));
+        System.out.println("subtract : " + calc.subtract(a, b));
+        System.out.println("multiply : " + calc.multiply(a, b));
+        System.out.println("divide : " + calc.divide(a, b));
+    }    
+    public int add(int a, int b) {
+        return a+b;
     }
-    
-    public static int add(int a, int b) {
-        int num;        
-        num = a + b;
-        return num;
+    public int subtract(int a, int b) {
+        return a-b;
+    }
+    public int multiply(int a, int b) {
+        return a*b;
+    }
+    public int divide(int a, int b) {
+        return a/b;
     }
 }
